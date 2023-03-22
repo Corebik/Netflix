@@ -1,0 +1,98 @@
+#input-data {
+  position: relative;
+}
+
+#input-data label {
+  position: absolute;
+  left: 9%;
+  top: 28%;
+  color: #BCB99E;
+  pointer-events: none;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+#input-data input:focus ~ label {
+  transform: translateY(-12px);
+  font-size: 0.7rem;
+}
+
+.accesos div {
+  text-decoration: underline;
+}
+
+.despliegue li {
+  list-style: none;
+  width: 100%;
+}
+
+.despliegue li label {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background: #303030;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.despliegue li label::after {
+  content: "+";
+  font-size: 45px;
+  font-weight: 300;
+  position: absolute;
+  right: 30px;
+  transition: transform 0.3s;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.despliegue .contenido {
+  background: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, padding 0.3s;
+  /*font-size: 1.4rem*/
+  font-weight: 450;
+}
+
+.despliegue input[type=checkbox]:checked + label + .contenido {
+  max-height: 600px;
+  padding: 30px 20px;
+  margin-bottom: 1rem;
+}
+
+.despliegue input[type=checkbox]:checked + label::after {
+  transform: rotate(50deg);
+  transition: transform 0.01s;
+}
+
+@media (max-width: 768px) {
+  #input-data label {
+    position: absolute;
+    left: 4%;
+    top: 10%;
+  }
+  .despliegue li label {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-size: 1.375rem;
+  }
+  .despliegue li label::after {
+    position: absolute;
+    margin-top: -7px;
+    margin-right: -19px;
+  }
+  .lista p {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 768px) {
+  .lista p {
+    font-size: 1.4rem;
+  }
+}/*# sourceMappingURL=style.css.map */
