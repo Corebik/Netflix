@@ -84,6 +84,11 @@ input[type="checkbox"]
 @media (min-width: 768px)
     .lista p
         font-size: 1.4rem
+    
+    .despliegue input[type="checkbox"]:checked + label::after
+        transform: rotate(50deg)
+        transition: transform 0.01s
+        margin-right: -7px
 
 .accesos div a:active
     color: red
