@@ -17,7 +17,7 @@
   font-size: 0.7rem;
 }
 
-.accesos div {
+.accesos a {
   text-decoration: underline;
 }
 
@@ -96,4 +96,7 @@ input[type=checkbox] {
   .lista p {
     font-size: 1.4rem;
   }
+}
+.accesos div a:active {
+  color: red;
 }/*# sourceMappingURL=style.css.map */
